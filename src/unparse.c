@@ -11,7 +11,7 @@
 /* unparse.c */
 void uuid_unparse(const uuid_t uu, char *out){
 	unsigned char *p;
-	if(UuidToString((UUID*)uu,&p) == RPC_S_OK){
+	if(UuidToStringA((UUID*)uu,&p) == RPC_S_OK){
 		memcpy(out,p,UUID_STR_LENGTH);
 		out[UUID_STR_LENGTH] = '\0';
 		RpcStringFree(&p );
@@ -21,7 +21,7 @@ void uuid_unparse(const uuid_t uu, char *out){
 }
 void uuid_unparse_lower(const uuid_t uu, char *out){
 	unsigned char *p;
-	if(UuidToString((UUID*)uu,&p) == RPC_S_OK){
+	if(UuidToStringA((UUID*)uu,&p) == RPC_S_OK){
 		int i;
 		for(i=0;i<UUID_STR_LENGTH;i++){
 			out[i] = tolower(p[i]);
@@ -34,7 +34,7 @@ void uuid_unparse_lower(const uuid_t uu, char *out){
 }
 void uuid_unparse_upper(const uuid_t uu, char *out){
 	unsigned char *p;
-	if(UuidToString((UUID*)uu,&p) == RPC_S_OK){
+	if(UuidToStringA((UUID*)uu,&p) == RPC_S_OK){
 		int i;
 		for(i=0;i<UUID_STR_LENGTH;i++){
 			out[i] = toupper(p[i]);

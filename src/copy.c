@@ -6,6 +6,7 @@
  */
 
 #include "uuid_inner.h"
+#include <string.h>
 
 /* copy.c */
 void uuid_copy(uuid_t dst, const uuid_t src){

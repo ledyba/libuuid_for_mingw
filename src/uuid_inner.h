@@ -8,9 +8,8 @@
 #ifndef UUID_INNER_H_
 #define UUID_INNER_H_
 
+#include <windows.h>
 #include <rpc.h>
-/* ちょっとトリッキーだけど、共存するためにはしょうがない。 */
-#undef uuid_t
 #include "../include/uuid/uuid.h"
 
 #endif /* UUID_INNER_H_ */

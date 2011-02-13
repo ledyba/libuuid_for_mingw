@@ -12,11 +12,14 @@
 #include "uuid_inner.h"
 
 void uuid_generate(uuid_t out){
+	UuidCreateNil((UUID*)out);
 	UuidCreate((UUID*)out);
 }
 void uuid_generate_random(uuid_t out){
+	UuidCreateNil((UUID*)out);
 	UuidCreate((UUID*)out);
 }
 void uuid_generate_time(uuid_t out){
+	UuidCreateNil((UUID*)out);
 	UuidCreate((UUID*)out);
 }
