@@ -16,7 +16,7 @@ void uuid_unparse(const uuid_t uu, char *out){
 		out[UUID_STR_LENGTH] = '\0';
 		RpcStringFree(&p );
 	}else{
-		out = NULL;
+		out[0] = '\0';
 	}
 }
 void uuid_unparse_lower(const uuid_t uu, char *out){
@@ -29,7 +29,7 @@ void uuid_unparse_lower(const uuid_t uu, char *out){
 		out[UUID_STR_LENGTH] = '\0';
 		RpcStringFree(&p );
 	}else{
-		out = NULL;
+		out[0] = '\0';
 	}
 }
 void uuid_unparse_upper(const uuid_t uu, char *out){
@@ -42,6 +42,6 @@ void uuid_unparse_upper(const uuid_t uu, char *out){
 		out[UUID_STR_LENGTH] = '\0';
 		RpcStringFree(&p );
 	}else{
-		out = NULL;
+		out[0] = '\0';
 	}
 }

@@ -19,34 +19,34 @@ extern "C" {
 #endif
 typedef unsigned char uuid_t[UUID_T_LENGTH];
 
-/* clear.c OK! */
+/* clear.c */
 extern void uuid_clear(uuid_t uu);
 
-/* compare.c OK! */
+/* compare.c */
 extern int uuid_compare(const uuid_t uu1, const uuid_t uu2);
 
-/* copy.c OK! */
+/* copy.c */
 extern void uuid_copy(uuid_t dst, const uuid_t src);
 
-/* gen_uuid.c OK! */
+/* gen_uuid.c */
 extern void uuid_generate(uuid_t out);
 extern void uuid_generate_random(uuid_t out);
 extern void uuid_generate_time(uuid_t out);
 
-/* isnull.c OK! */
+/* isnull.c */
 extern int uuid_is_null(const uuid_t uu);
 
-/* parse.c OK! */
+/* parse.c */
 extern int uuid_parse(const char *in, uuid_t uu);
 
-/* unparse.c OK! */
+/* unparse.c */
 extern void uuid_unparse(const uuid_t uu, char *out);
 extern void uuid_unparse_lower(const uuid_t uu, char *out);
 extern void uuid_unparse_upper(const uuid_t uu, char *out);
 
 /* uuid_time.c */
 /*
-TODO: 実装すんのこれ？
+TODO: Should we implement these functions?
 extern time_t uuid_time(const uuid_t uu, struct timeval *ret_tv);
 extern int uuid_type(const uuid_t uu);
 extern int uuid_variant(const uuid_t uu);
